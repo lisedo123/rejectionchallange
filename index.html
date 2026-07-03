@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejection Therapy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    <div class="wrap">
+
+        <header>
+            <div>
+                <h1>Rejection Therapy</h1> 
+                <div class="tagline">This is designed for you to train you self to not be sad/mad when you get a no.</div>
+            </div>
+            <div class="goal-toggle" id="goalToggle">
+                <button data-goal="100">100</button>
+                <button data-goal="1000">1000</button>
+            </div>
+
+        </header>
+
+        <div class="ledger">
+            <div class="ledger-row"> 
+                <div>
+                    <div class="stat-num" id="statTotal">0</div>
+                    <div class="stat-label">Attempts</div>
+                </div>
+                 
+                <div class="stat-rejected">
+                    <div class="stat-num" id="statRejected">0</div>
+                    <div class="stat-label">Rejected</div>
+                </div>
+                <div class="stat-accepted">
+                    <div class="stat-num" id="statAccepted">0</div>
+                    <div class="stat-label">Accepted</div>
+                </div>
+                <div>
+                    <div class="stat-num" id="statPending">0</div>
+                    <div class="stat-label">Waiting for response</div>
+                </div>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-caption">
+                <span id="progressCaption">0 of 100 "rejections"</span>
+                <span id="rejectRate">- reject rate</span>
+            </div>
+        </div>
+
+        <div class="new-ask">
+            <h2>log a new "rejection"</h2>
+            <textarea id="newInput" placeholder="write what you want to ask or do, and to whom"></textarea>
+            <div class="new-ask-footer">
+                <div class="fear-slider">
+                    <span>Odds I would get rejected:</span>
+                    <input type="range" id="fearSlider" min="0" max="100" value="70" step="5">
+                    <span id="fearValue">70%</span>
+                </div>
+                <button class="stamp-btn" id="submitAsk">Submit</button>
+            </div>
+        </div>
+
+        <div class="entries" id="entries"></div>
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <i class="ti ti-pencil"></i>
+            No rejections logged yet. Start by logging your first "rejection" above! It can be anything, from asking someone out to asking for the route to somewhere. The goal is to get used to hearing "no".
+        </div>
+
+    </div>
+
+</body>
+</html>
